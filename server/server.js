@@ -99,7 +99,7 @@ app.patch('/todos/:id', authenticate, (req, res) => {
     }, {
         $set: body
     }, {
-        new: true
+        new: true   //returns the modified document
     }).then((todo) => {
         if (!todo) {
             return res.status(404).send();
