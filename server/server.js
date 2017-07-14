@@ -138,7 +138,6 @@ app.post('/users/login', (req, res) => {
     }).catch((e) => {
         res.status(400).send();
     });
-    
 });
 
 app.delete('/users/me/token', authenticate,  (req, res) => {
@@ -147,7 +146,7 @@ app.delete('/users/me/token', authenticate,  (req, res) => {
     }, () => {
         res.status(400).send();
     });
-})
+});
 
 app.listen(port, () => {
     console.log(`Started on port ${port}`);
